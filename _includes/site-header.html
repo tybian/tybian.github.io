@@ -5,7 +5,10 @@
     {% assign page_refs = site.header_page_refs | default: default_refs %}
 
     {% if page.layout != 'home' %}
-      <a class="site-title" href="{{ "/" | absolute_url }}">{{ site.title | escape }}</a>
+    <div style="position: absolute; height: 100%; display: table-column-group;">
+      <img src="/favicon.ico", style="height: 100%; float: left;" />&nbsp;&nbsp;
+      <a class="site-title" style="float: right;"  href="{{ "/" | absolute_url }}">{{ site.title | escape }}</a>
+    </div>
     {% endif %}
 
     {% if page_refs %}
